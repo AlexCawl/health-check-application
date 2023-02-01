@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="check_box">check box</string>
+    <string name="enter_username">Enter username</string>
+    <string name="separator">separator</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email">Enter email</string>
+</resources>

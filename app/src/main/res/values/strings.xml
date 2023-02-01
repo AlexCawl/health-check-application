@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Health Check Application</string>
+    <string name="check_box">check box</string>
+    <string name="enter_username">Enter username</string>
+    <string name="separator">separator</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_email">Enter email</string>
+</resources>
