@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,9 +18,6 @@ import androidx.navigation.Navigation;
 
 import org.alexcawl.health_check_application.R;
 import org.alexcawl.health_check_application.databinding.FragmentLoginBinding;
-import org.alexcawl.health_check_application.databinding.FragmentRegisterBinding;
-
-import java.util.Objects;
 
 public class LoginFragment extends Fragment {
     private FragmentLoginBinding binding;
@@ -78,11 +74,6 @@ public class LoginFragment extends Fragment {
     }
 
     private void initNavigateToRegisterButton(Button button) {
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navController.navigate(R.id.nav_register);
-            }
-        });
+        button.setOnClickListener(listener -> navController.navigate(R.id.nav_register));
     }
 }

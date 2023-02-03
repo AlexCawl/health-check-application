@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Health Check Application</string>
-    <string name="check_box">check box</string>
+
     <string name="enter_username">Enter username</string>
-    <string name="separator">separator</string>
     <string name="enter_password">Enter password</string>
     <string name="enter_email">Enter email</string>
-    <string name="logo">logo</string>
-    <string name="login_description">Login description</string>
+    <string name="confirm_password">Confirm password</string>
+
+    <string name="logo">Health Check Application Logo</string>
     <string name="log_in">Log In</string>
     <string name="register">Register</string>
-    <string name="register_description">Register Description</string>
-    <string name="email_description">Email description</string>
     <string name="show_options">Show options</string>
-    <string name="confirm_password">Confirm password</string>
+
+    <string name="login_description">Enter your username and password to log in to the application. In the app for the first time? Register by clicking the button below.</string>
+    <string name="register_description">Come up with your account name and password. Confirm the password in the form below.</string>
+    <string name="email_description">Email is optional, but we would be happy if you would share the address with us.</string>
 </resources>

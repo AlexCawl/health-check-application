@@ -1,5 +1,6 @@
 package org.alexcawl.health_check_application.resource;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.text.Editable;
@@ -35,46 +36,42 @@ public class EditTextWithClearButton extends AppCompatEditText {
         init();
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void init() {
-        // Initialize Drawable member variable.
         mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_24dp, getContext().getTheme());
 
-        setOnTouchListener(new OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if ((getCompoundDrawablesRelative()[2] != null)) {
-                    float clearButtonStart; // Used for LTR languages
-                    float clearButtonEnd;  // Used for RTL languages
-                    boolean isClearButtonClicked = false;
-                    if (getLayoutDirection() == LAYOUT_DIRECTION_RTL) {
-                        clearButtonEnd = mClearButtonImage.getIntrinsicWidth() + getPaddingStart();
-                        if (event.getX() < clearButtonEnd) {
-                            isClearButtonClicked = true;
-                        }
-                    } else {
-                        clearButtonStart = (getWidth() - getPaddingEnd()
-                                - mClearButtonImage.getIntrinsicWidth());
-                        if (event.getX() > clearButtonStart) {
-                            isClearButtonClicked = true;
-                        }
+        setOnTouchListener((View view, MotionEvent event) -> {
+            if ((getCompoundDrawablesRelative()[2] != null)) {
+                float clearButtonStart; // Used for LTR languages
+                float clearButtonEnd;  // Used for RTL languages
+                boolean isClearButtonClicked = false;
+                if (getLayoutDirection() == LAYOUT_DIRECTION_RTL) {
+                    clearButtonEnd = mClearButtonImage.getIntrinsicWidth() + getPaddingStart();
+                    if (event.getX() < clearButtonEnd) {
+                        isClearButtonClicked = true;
                     }
-                    if (isClearButtonClicked) {
-                        if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                            mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_focused_24dp, getContext().getTheme());
-                            showClearButton();
-                        }
-                        if (event.getAction() == MotionEvent.ACTION_UP) {
-                            mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_24dp, getContext().getTheme());
-                            Objects.requireNonNull(getText()).clear();
-                            hideClearButton();
-                            return true;
-                        }
-                    } else {
-                        return false;
+                } else {
+                    clearButtonStart = (getWidth() - getPaddingEnd() - mClearButtonImage.getIntrinsicWidth());
+                    if (event.getX() > clearButtonStart) {
+                        isClearButtonClicked = true;
                     }
                 }
-                return false;
+                if (isClearButtonClicked) {
+                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_focused_24dp, getContext().getTheme());
+                        showClearButton();
+                    }
+                    if (event.getAction() == MotionEvent.ACTION_UP) {
+                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_24dp, getContext().getTheme());
+                        Objects.requireNonNull(getText()).clear();
+                        hideClearButton();
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
             }
+            return false;
         });
 
         addTextChangedListener(new TextWatcher() {
@@ -100,14 +97,11 @@ public class EditTextWithClearButton extends AppCompatEditText {
             }
         });
 
-        setOnFocusChangeListener(new OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus && getText() != null && !getText().toString().isEmpty()) {
-                    showClearButton();
-                } else {
-                    hideClearButton();
-                }
+        setOnFocusChangeListener((view, hasFocus) -> {
+            if (hasFocus && getText() != null && !getText().toString().isEmpty()) {
+                showClearButton();
+            } else {
+                hideClearButton();
             }
         });
     }
@@ -115,10 +109,7 @@ public class EditTextWithClearButton extends AppCompatEditText {
     /**
      * Shows the clear (X) button.
      */
-
     private void showClearButton() {
-        // Sets the Drawables (if any) to appear to the left of,
-        // above, to the right of, and below the text.
         setCompoundDrawablesRelativeWithIntrinsicBounds(
                 getCompoundDrawablesRelative()[0],
                 getCompoundDrawablesRelative()[1],
