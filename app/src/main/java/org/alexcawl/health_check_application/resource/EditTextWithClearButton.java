@@ -17,20 +17,20 @@ import org.alexcawl.health_check_application.R;
 
 import java.util.Objects;
 
-public class ExtendedEditText extends AppCompatEditText {
+public class EditTextWithClearButton extends AppCompatEditText {
     Drawable mClearButtonImage;
 
-    public ExtendedEditText(@NonNull Context context) {
+    public EditTextWithClearButton(@NonNull Context context) {
         super(context);
         init();
     }
 
-    public ExtendedEditText(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public EditTextWithClearButton(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public ExtendedEditText(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public EditTextWithClearButton(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
