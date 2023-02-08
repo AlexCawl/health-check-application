@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
-    tools:context=".ui.login.fragment.RegisterFragment">
+    tools:context=".ui.fragment.RegisterFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,7 +43,7 @@
             android:orientation="horizontal"
             android:padding="5dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_username_field"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -101,17 +101,18 @@
             android:orientation="horizontal"
             android:padding="5dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_password_field_1"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="8"
-                android:autofillHints="password"
                 android:background="@drawable/selector_edit_text_rounded"
                 android:drawableStart="@drawable/selector_lock"
                 android:drawablePadding="10dp"
                 android:hint="@string/enter_password"
-                android:paddingHorizontal="5dp" />
+                android:paddingHorizontal="5dp"
+                android:autofillHints="password"
+                android:inputType="textPassword"/>
 
             <ImageButton
                 android:id="@+id/image_button_password_field_1"
@@ -139,17 +140,18 @@
             android:orientation="horizontal"
             android:padding="5dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_password_field_2"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="8"
-                android:autofillHints="password"
                 android:background="@drawable/selector_edit_text_rounded"
                 android:drawableStart="@drawable/selector_lock"
                 android:drawablePadding="10dp"
                 android:hint="@string/confirm_password"
-                android:paddingHorizontal="5dp" />
+                android:paddingHorizontal="5dp"
+                android:autofillHints="password"
+                android:inputType="textPassword" />
 
             <ImageButton
                 android:id="@+id/image_button_password_field_2"
@@ -176,7 +178,7 @@
             android:orientation="horizontal"
             android:padding="5dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_email_field"
                 android:layout_width="0dp"
                 android:layout_height="50dp"

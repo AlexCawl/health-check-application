@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_background"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.login.fragment.LoginFragment">
+    tools:context=".ui.fragment.LoginFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -43,7 +43,7 @@
             android:padding="5dp"
             android:layout_marginHorizontal="25dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_username_field"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -101,7 +101,7 @@
             android:padding="5dp"
             android:layout_marginHorizontal="25dp">
 
-            <org.alexcawl.health_check_application.resource.EditTextWithClearButton
+            <org.alexcawl.health_check_application.ui.resource.EditTextWithClearButton
                 android:id="@+id/edit_text_password_field"
                 android:layout_width="0dp"
                 android:layout_height="50dp"

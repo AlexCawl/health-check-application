@@ -15,4 +15,7 @@
     <string name="login_description">Enter your username and password to log in to the application. In the app for the first time? Register by clicking the button below.</string>
     <string name="register_description">Come up with your account name and password. Confirm the password in the form below.</string>
     <string name="email_description">Email is optional, but we would be happy if you would share the address with us.</string>
+    <string name="schedule">Schedule</string>
+    <string name="diagram">Diagram</string>
+    <string name="settings">Settings</string>
 </resources>

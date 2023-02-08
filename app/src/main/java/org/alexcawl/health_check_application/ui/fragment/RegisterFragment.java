@@ -1,4 +1,4 @@
-package org.alexcawl.health_check_application.ui.login.fragment;
+package org.alexcawl.health_check_application.ui.fragment;
 
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
@@ -80,7 +80,7 @@ public class RegisterFragment extends Fragment {
     }
 
     private void initNavigateToLoginButton(Button button) {
-        button.setOnClickListener(listener -> navController.navigate(R.id.nav_login));
+        button.setOnClickListener(listener -> navController.navigate(R.id.destination_schedule));
     }
 
     private void initPasswordHidingAction(ImageButton button, EditText editText) {

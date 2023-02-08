@@ -1,4 +1,4 @@
-package org.alexcawl.health_check_application.resource;
+package org.alexcawl.health_check_application.ui.resource;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

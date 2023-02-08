@@ -1,5 +1,6 @@
-package org.alexcawl.health_check_application.ui.login.fragment;
+package org.alexcawl.health_check_application.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.util.TypedValue;
@@ -18,6 +19,7 @@ import androidx.navigation.Navigation;
 
 import org.alexcawl.health_check_application.R;
 import org.alexcawl.health_check_application.databinding.FragmentLoginBinding;
+import org.alexcawl.health_check_application.ui.activity.HomeActivity;
 
 public class LoginFragment extends Fragment {
     private FragmentLoginBinding binding;
@@ -36,6 +38,7 @@ public class LoginFragment extends Fragment {
         initUsernameOptionHidingAction(binding.imageButtonUsernameField);
         initPasswordHidingAction(binding.imageButtonPasswordField, binding.editTextPasswordField);
         initNavigateToRegisterButton(binding.registerButton);
+        initNavigateToMainActivityButton(binding.loginButton);
         return binding.getRoot();
     }
 
@@ -74,6 +77,14 @@ public class LoginFragment extends Fragment {
     }
 
     private void initNavigateToRegisterButton(Button button) {
-        button.setOnClickListener(listener -> navController.navigate(R.id.nav_register));
+        button.setOnClickListener(listener -> navController.navigate(R.id.destination_register));
+    }
+
+    private void initNavigateToMainActivityButton(Button button) {
+        button.setOnClickListener(listener -> {
+            Intent intent = new Intent(this.getContext(), HomeActivity.class);
+            intent.putExtra("state", "successful_login");
+            this.startActivity(intent);
+        });
     }
 }
