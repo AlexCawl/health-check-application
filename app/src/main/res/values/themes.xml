@@ -1,27 +1,4 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="Theme.HealthCheckApplication" parent="Theme.MaterialComponents.DayNight">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary_theme_color_light</item>
-        <item name="colorPrimaryVariant">@color/primary_theme_color_darker</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/special_theme_color_light</item>
-        <item name="colorSecondaryVariant">@color/special_theme_color_darker</item>
-
-        <item name="android:colorBackground">@color/main_background</item>
-        <item name="colorOnBackground">@color/main_foreground</item>
-
-        <item name="colorOutline">@color/icons_background_color_light</item>
-
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
-    </style>
-
-    <style name="Theme.HealthCheckApplication.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
     <style name="Divider">
         <item name="android:background">?attr/colorOutline</item>
     </style>
@@ -35,6 +12,24 @@
     <style name="Divider.Vertical" parent="Divider">
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="HealthCheckApplication.ActionBar" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary_theme_color_light</item>
+        <item name="colorPrimaryDark">@color/primary_theme_color_darker</item>
+        <item name="colorSecondary">@color/special_theme_color_light</item>
+        <item name="background">@color/main_background</item>
+        <item name="colorOutline">@color/icons_background_color_light</item>
+        <item name="android:statusBarColor">@color/primary_theme_color_light</item>
+    </style>
+    
+    <style name="HealthCheckApplication.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_theme_color_light</item>
+        <item name="colorPrimaryVariant">@color/primary_theme_color_darker</item>
+        <item name="colorSecondary">@color/special_theme_color_light</item>
+        <item name="background">@color/main_background</item>
+        <item name="colorOutline">@color/icons_background_color_light</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>
 </resources>
 

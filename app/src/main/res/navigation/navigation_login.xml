@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_login"
-    app:startDestination="@id/destination_schedule">
+    app:startDestination="@id/destination_login">
 
     <fragment
-        android:id="@+id/destination_schedule"
+        android:id="@+id/destination_login"
         android:name="org.alexcawl.health_check_application.ui.fragment.LoginFragment"
         tools:layout="@layout/fragment_login" />
     <fragment

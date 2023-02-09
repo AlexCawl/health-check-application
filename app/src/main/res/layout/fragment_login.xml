@@ -61,8 +61,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/selector_hint"
-                android:backgroundTint="?attr/colorOnBackground"
-                android:contentDescription="@string/show_options"/>
+                android:backgroundTint="?attr/colorPrimary"
+                android:contentDescription="@string/show_options" />
         </LinearLayout>
 
         <View
@@ -120,7 +120,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/selector_eye"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="?attr/colorPrimary"
                 android:contentDescription="@string/show_options"/>
         </LinearLayout>
     </LinearLayout>

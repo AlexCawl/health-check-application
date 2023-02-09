@@ -60,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="?attr/colorPrimary"
                 android:contentDescription="@string/show_options"
                 android:src="@drawable/selector_hint" />
         </LinearLayout>
@@ -119,7 +119,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="?attr/colorPrimary"
                 android:contentDescription="@string/show_options"
                 android:src="@drawable/selector_eye" />
         </LinearLayout>
@@ -158,7 +158,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="?attr/colorPrimary"
                 android:contentDescription="@string/show_options"
                 android:src="@drawable/selector_eye" />
         </LinearLayout>
@@ -195,7 +195,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="?attr/colorPrimary"
                 android:contentDescription="@string/show_options"
                 android:src="@drawable/selector_hint" />
         </LinearLayout>

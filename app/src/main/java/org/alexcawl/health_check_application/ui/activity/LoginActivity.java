@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.alexcawl.health_check_application.databinding.ActivityHomeBinding;
 import org.alexcawl.health_check_application.databinding.ActivityLoginBinding;
 import org.alexcawl.health_check_application.service.ILoginService;
 import org.alexcawl.health_check_application.service.LoginService;
@@ -20,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
         this.binding = ActivityLoginBinding.inflate(getLayoutInflater());
         this.loginService = initLoginService();
         setContentView(binding.getRoot());
-        getSupportActionBar().hide();
     }
 
     @NonNull

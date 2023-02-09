@@ -80,7 +80,7 @@ public class RegisterFragment extends Fragment {
     }
 
     private void initNavigateToLoginButton(Button button) {
-        button.setOnClickListener(listener -> navController.navigate(R.id.destination_schedule));
+        button.setOnClickListener(listener -> navController.navigate(R.id.destination_login));
     }
 
     private void initPasswordHidingAction(ImageButton button, EditText editText) {

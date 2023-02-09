@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/destination_schedule"
+        android:icon="@drawable/icon_schedule_24dp"
+        android:title="@string/schedule"
+        android:tooltipText="@string/schedule" />
+    <item
+        android:id="@+id/destination_diagram"
+        android:icon="@drawable/icon_chart_outlined_24dp"
+        android:title="@string/diagram"
+        android:tooltipText="@string/diagram" />
+    <item
+        android:id="@+id/destination_settings"
+        android:icon="@drawable/icon_settings_24dp"
+        android:title="@string/settings"
+        android:tooltipText="@string/settings" />
+</menu>
