@@ -1,4 +1,5 @@
 <resources>
+
     <style name="Divider">
         <item name="android:background">?attr/colorOutline</item>
     </style>
@@ -6,7 +7,6 @@
     <style name="Divider.Horizontal" parent="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
-
     </style>
 
     <style name="Divider.Vertical" parent="Divider">
@@ -19,15 +19,17 @@
         <item name="colorPrimaryDark">@color/primary_theme_color_darker</item>
         <item name="colorSecondary">@color/special_theme_color_light</item>
         <item name="background">@color/main_background</item>
+        <item name="colorOnBackground">@color/main_foreground</item>
         <item name="colorOutline">@color/icons_background_color_light</item>
         <item name="android:statusBarColor">@color/primary_theme_color_light</item>
     </style>
-    
+
     <style name="HealthCheckApplication.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary_theme_color_light</item>
         <item name="colorPrimaryVariant">@color/primary_theme_color_darker</item>
         <item name="colorSecondary">@color/special_theme_color_light</item>
         <item name="background">@color/main_background</item>
+        <item name="colorOnBackground">@color/main_foreground</item>
         <item name="colorOutline">@color/icons_background_color_light</item>
         <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>

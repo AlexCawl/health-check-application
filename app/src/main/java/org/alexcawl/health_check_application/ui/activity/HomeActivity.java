@@ -66,9 +66,5 @@ public class HomeActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    @Override
-    public boolean onNavigateUp() {
-        Toast.makeText(this, "Navigate up", Toast.LENGTH_LONG).show();
-        return super.onNavigateUp();
-    }
+
 }

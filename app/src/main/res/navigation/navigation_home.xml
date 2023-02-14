@@ -8,16 +8,16 @@
     <fragment
         android:id="@+id/destination_schedule"
         android:name="org.alexcawl.health_check_application.ui.fragment.ScheduleFragment"
-        android:label="fragment_schedule"
+        android:label="@string/schedule"
         tools:layout="@layout/fragment_schedule" />
     <fragment
         android:id="@+id/destination_diagram"
         android:name="org.alexcawl.health_check_application.ui.fragment.DiagramFragment"
-        android:label="fragment_diagram"
+        android:label="@string/diagram"
         tools:layout="@layout/fragment_diagram" />
     <fragment
         android:id="@+id/destination_settings"
         android:name="org.alexcawl.health_check_application.ui.fragment.SettingsFragment"
-        android:label="fragment_settings"
+        android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
 </navigation>

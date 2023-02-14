@@ -5,9 +5,10 @@
     android:background="?attr/colorPrimary"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:paddingTop="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Example description" />
-
+        android:layout_height="176dp"
+        android:src="@drawable/icon_demo_logo_24dp"
+        android:contentDescription="TODO" />
 </LinearLayout>
