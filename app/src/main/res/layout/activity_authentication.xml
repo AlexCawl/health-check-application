@@ -14,12 +14,12 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/navigation_login" />
+        app:navGraph="@navigation/navigation_authentication" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bottom_bar_activity_authentication"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        app:menu="@menu/menu_activity_login_navigation"/>
+        app:menu="@menu/menu_activity_authentication"/>
 </LinearLayout>
