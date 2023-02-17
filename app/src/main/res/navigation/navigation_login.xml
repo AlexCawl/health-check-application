@@ -3,14 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_login"
-    app:startDestination="@id/destination_schedule">
+    app:startDestination="@id/destination_fragment_login">
+
+    <activity
+        android:id="@+id/destination_home_activity"
+        android:name="org.alexcawl.health_check_application.ui.activity.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 
     <fragment
-        android:id="@+id/destination_schedule"
+        android:id="@+id/destination_fragment_login"
         android:name="org.alexcawl.health_check_application.ui.fragment.LoginFragment"
         tools:layout="@layout/fragment_login" />
+
     <fragment
-        android:id="@+id/destination_register"
+        android:id="@+id/destination_fragment_register"
         android:name="org.alexcawl.health_check_application.ui.fragment.RegisterFragment"
         tools:layout="@layout/fragment_register" />
+
 </navigation>

@@ -6,28 +6,17 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
-import org.alexcawl.health_check_application.R;
 import org.alexcawl.health_check_application.databinding.FragmentRegisterBinding;
 
 public class RegisterFragment extends Fragment {
     private FragmentRegisterBinding binding;
-    private NavController navController;
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        navController = Navigation.findNavController(view);
-    }
 
     @Nullable
     @Override
@@ -35,7 +24,6 @@ public class RegisterFragment extends Fragment {
         binding = FragmentRegisterBinding.inflate(inflater, container, false);
         initUsernameOptionHidingAction(binding.imageButtonUsernameField);
         initEmailOptionHidingAction(binding.imageButtonEmailField);
-        initNavigateToLoginButton(binding.loginButton);
         initPasswordHidingAction(binding.imageButtonPasswordField1, binding.editTextPasswordField1);
         initPasswordHidingAction(binding.imageButtonPasswordField2, binding.editTextPasswordField2);
         return binding.getRoot();
@@ -77,10 +65,6 @@ public class RegisterFragment extends Fragment {
 
             binding.hiddenEmailOptions.setLayoutParams(hiddenTextParams);
         });
-    }
-
-    private void initNavigateToLoginButton(Button button) {
-        button.setOnClickListener(listener -> navController.navigate(R.id.destination_schedule));
     }
 
     private void initPasswordHidingAction(ImageButton button, EditText editText) {

@@ -14,22 +14,12 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 
-import org.alexcawl.health_check_application.R;
 import org.alexcawl.health_check_application.databinding.FragmentLoginBinding;
 import org.alexcawl.health_check_application.ui.activity.HomeActivity;
 
 public class LoginFragment extends Fragment {
     private FragmentLoginBinding binding;
-    private NavController navController;
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        navController = Navigation.findNavController(view);
-    }
 
     @Nullable
     @Override
@@ -37,7 +27,6 @@ public class LoginFragment extends Fragment {
         binding = FragmentLoginBinding.inflate(inflater, container, false);
         initUsernameOptionHidingAction(binding.imageButtonUsernameField);
         initPasswordHidingAction(binding.imageButtonPasswordField, binding.editTextPasswordField);
-        initNavigateToRegisterButton(binding.registerButton);
         initNavigateToMainActivityButton(binding.loginButton);
         return binding.getRoot();
     }
@@ -74,10 +63,6 @@ public class LoginFragment extends Fragment {
                 editText.setTransformationMethod(null);
             }
         });
-    }
-
-    private void initNavigateToRegisterButton(Button button) {
-        button.setOnClickListener(listener -> navController.navigate(R.id.destination_register));
     }
 
     private void initNavigateToMainActivityButton(Button button) {
