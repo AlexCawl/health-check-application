@@ -18,19 +18,26 @@ import java.util.Objects;
 public class AuthenticationActivity extends AppCompatActivity {
     private ActivityAuthenticationBinding binding;
 
+    private void hideActionBar() {
+        try {
+            Objects.requireNonNull(getSupportActionBar()).hide();
+        } catch (NullPointerException ignored) {
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.binding = ActivityAuthenticationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        try {
-            Objects.requireNonNull(getSupportActionBar()).hide();
-        } catch (NullPointerException ignored) {
-        }
+        hideActionBar();
         BottomNavigationView navView = findViewById(R.id.navigation_bottom_bar_activity_authentication);
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.destination_fragment_login, R.id.destination_fragment_register, R.id.destination_home_activity).build();
-        NavController navController = Navigation.findNavController(this, R.id.navigation_host_container_login);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.destination_fragment_login,
+                R.id.destination_fragment_register,
+                R.id.destination_home_activity).build();
+        NavController navController = Navigation.findNavController(this, R.id.navigation_host_container_auth);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navigationBottomBarActivityAuthentication, navController);
+        NavigationUI.setupWithNavController(navView, navController);
     }
 }

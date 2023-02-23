@@ -36,5 +36,9 @@
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
+    <style name="Theme.HealthCheckApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.HealthCheckApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
 

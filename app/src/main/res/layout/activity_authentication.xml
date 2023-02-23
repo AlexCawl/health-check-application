@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <fragment
-        android:id="@+id/navigation_host_container_login"
+        android:id="@+id/navigation_host_container_auth"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
