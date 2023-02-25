@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/destination_fragment_login"
+        android:icon="@drawable/icon_baseline_login_24dp"
+        android:title="@string/namespace_sign_in" />
+    <item
+        android:id="@+id/destination_fragment_register"
+        android:icon="@drawable/icon_baseline_person_add_24dp"
+        android:title="@string/namespace_sign_up" />
+    <item
+        android:id="@+id/destination_home_activity"
+        android:icon="@drawable/icon_baseline_skip_next_24dp"
+        android:title="@string/namespace_skip_auth" />
+</menu>

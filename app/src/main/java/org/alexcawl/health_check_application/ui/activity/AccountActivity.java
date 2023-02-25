@@ -12,22 +12,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
 import org.alexcawl.health_check_application.R;
-import org.alexcawl.health_check_application.databinding.ActivityHomeBinding;
+import org.alexcawl.health_check_application.databinding.ActivityAccountBinding;
 
-public class HomeActivity extends AppCompatActivity {
-    private ActivityHomeBinding binding;
+public class AccountActivity extends AppCompatActivity {
+    private ActivityAccountBinding binding;
 
     @SuppressLint("NonConstantResourceId")
     private void initiateNavigationDrawerMenu() {
-        Toolbar toolbar = binding.activityHomeToolbar;
-        NavigationView navigationView = binding.activityHomeNavigationView;
-        DrawerLayout drawerLayout = binding.activityHomeDrawerLayout;
+        Toolbar toolbar = binding.activityAccountToolbar;
+        NavigationView navigationView = binding.activityAccountNavigationView;
+        DrawerLayout drawerLayout = binding.activityAccountDrawerLayout;
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(item -> {
             drawerLayout.closeDrawer(navigationView, true);
             switch (item.getItemId()) {
-                case R.id.destination_activity_account:
-                    startActivity(new Intent(this, AccountActivity.class));
+                case R.id.destination_activity_home:
+                    startActivity(new Intent(this, HomeActivity.class));
                     overridePendingTransition(0, 0);
                     break;
                 case R.id.destination_activity_settings:
@@ -47,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+        this.binding = ActivityAccountBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         initiateNavigationDrawerMenu();
     }

@@ -21,5 +21,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        app:menu="@menu/menu_activity_authentication"/>
+        app:menu="@menu/menu_authentication"/>
 </LinearLayout>

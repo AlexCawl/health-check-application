@@ -19,7 +19,7 @@ import org.alexcawl.health_check_application.R;
 import java.util.Objects;
 
 public class EditTextWithClearButton extends AppCompatEditText {
-    Drawable mClearButtonImage;
+    private Drawable mClearButtonImage;
 
     public EditTextWithClearButton(@NonNull Context context) {
         super(context);
@@ -38,7 +38,7 @@ public class EditTextWithClearButton extends AppCompatEditText {
 
     @SuppressLint("ClickableViewAccessibility")
     private void init() {
-        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_24dp, getContext().getTheme());
+        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_baseline_cross_24dp, getContext().getTheme());
 
         setOnTouchListener((View view, MotionEvent event) -> {
             if ((getCompoundDrawablesRelative()[2] != null)) {
@@ -58,11 +58,11 @@ public class EditTextWithClearButton extends AppCompatEditText {
                 }
                 if (isClearButtonClicked) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_focused_24dp, getContext().getTheme());
+                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_baseline_cross_focused_24dp, getContext().getTheme());
                         showClearButton();
                     }
                     if (event.getAction() == MotionEvent.ACTION_UP) {
-                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_cross_24dp, getContext().getTheme());
+                        mClearButtonImage = ResourcesCompat.getDrawable(getResources(), R.drawable.icon_baseline_cross_24dp, getContext().getTheme());
                         Objects.requireNonNull(getText()).clear();
                         hideClearButton();
                         return true;
