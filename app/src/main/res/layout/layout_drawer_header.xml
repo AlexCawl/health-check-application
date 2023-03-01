@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="250dp"
     android:background="?attr/colorPrimary"
     android:orientation="vertical">
 
@@ -14,36 +14,47 @@
         android:contentDescription="@string/description_application_logo"
         android:paddingVertical="20dp"
         app:srcCompat="@drawable/icon_baseline_demo_logo_24dp"
-        app:tint="@color/white" />
+        app:tint="?attr/colorOnPrimary" />
 
     <TextView
         android:id="@+id/header_account_info"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:drawablePadding="10dp"
         android:gravity="center|start"
-        android:paddingHorizontal="15dp"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="5dp"
         android:text="@string/resource_account_name"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:background="@drawable/shape_rounded_rectangular"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:textColor="?attr/colorAccent"
         android:textSize="16sp"
         app:drawableLeftCompat="@drawable/icon_baseline_person_24dp"
-        app:drawableTint="@color/white" />
+        app:drawableTint="?attr/colorAccent" />
+
+    <View style="@style/Divider.Horizontal" android:layout_height="5dp"/>
 
     <TextView
         android:id="@+id/header_schedule_info"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:drawablePadding="10dp"
         android:gravity="center|start"
-        android:paddingHorizontal="15dp"
+        android:paddingHorizontal="10dp"
         android:text="@string/resource_schedule_name"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:background="@drawable/shape_rounded_rectangular"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="?attr/colorOnPrimary"
+        android:textColor="?attr/colorAccent"
         android:textSize="16sp"
         app:drawableLeftCompat="@drawable/icon_baseline_calendar_month_24dp"
-        app:drawableTint="@color/white" />
+        app:drawableTint="?attr/colorAccent" />
+
+    <View style="@style/Divider.Horizontal" android:layout_height="10dp"/>
+
 
 </LinearLayout>

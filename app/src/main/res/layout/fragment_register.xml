@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_register"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background"
     tools:context=".ui.fragment.RegisterFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/main_background"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,26 +18,27 @@
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            style="@style/View.Icon"
             android:contentDescription="@string/description_application_logo"
-            android:src="@drawable/icon_baseline_demo_logo_24dp" />
+            android:src="@drawable/icon_baseline_demo_logo_24dp"/>
 
         <View
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <LinearLayout
             android:id="@+id/linear_layout_username_field"
+            style="@style/View.Surface.Light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -60,7 +59,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="@android:color/transparent"
                 android:contentDescription="@string/hint_show_options"
                 android:src="@drawable/selector_baseline_question_mark_24dp" />
         </LinearLayout>
@@ -70,34 +69,32 @@
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/hidden_username_options"
+            style="@style/View.TextContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:padding="10dp"
-            android:text="@string/hint_register_description"
-            android:textColor="?attr/colorOutline"
-            android:textSize="18sp" />
+            android:text="@string/hint_register_description" />
 
         <View
             android:id="@+id/divider_bottom"
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <!-- Поле для ввода пароля -->
         <LinearLayout
             android:id="@+id/linear_layout_password_field_1"
+            style="@style/View.Surface.Light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -106,20 +103,20 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="8"
+                android:autofillHints="password"
                 android:background="@drawable/selector_edit_text_rounded"
                 android:drawableStart="@drawable/selector_baseline_lock_24p"
                 android:drawablePadding="10dp"
                 android:hint="@string/hint_enter_password"
-                android:paddingHorizontal="5dp"
-                android:autofillHints="password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:paddingHorizontal="5dp" />
 
             <ImageButton
                 android:id="@+id/image_button_password_field_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="@android:color/transparent"
                 android:contentDescription="@string/hint_show_options"
                 android:src="@drawable/selector_baseline_eye_24dp" />
         </LinearLayout>
@@ -128,15 +125,15 @@
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <!-- Поле для подтверждения ввода пароля -->
         <LinearLayout
             android:id="@+id/linear_layout_password_field_2"
+            style="@style/View.Surface.Light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -145,20 +142,20 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="8"
+                android:autofillHints="password"
                 android:background="@drawable/selector_edit_text_rounded"
                 android:drawableStart="@drawable/selector_baseline_lock_24p"
                 android:drawablePadding="10dp"
                 android:hint="@string/hint_confirm_password"
-                android:paddingHorizontal="5dp"
-                android:autofillHints="password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:paddingHorizontal="5dp" />
 
             <ImageButton
                 android:id="@+id/image_button_password_field_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="@android:color/transparent"
                 android:contentDescription="@string/hint_show_options"
                 android:src="@drawable/selector_baseline_eye_24dp" />
         </LinearLayout>
@@ -167,14 +164,14 @@
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <LinearLayout
             android:id="@+id/email_fragment"
+            style="@style/View.Surface.Light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:orientation="horizontal"
             android:padding="5dp">
 
@@ -195,7 +192,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:backgroundTint="?attr/colorOnBackground"
+                android:backgroundTint="@android:color/transparent"
                 android:contentDescription="@string/hint_show_options"
                 android:src="@drawable/selector_baseline_question_mark_24dp" />
         </LinearLayout>
@@ -204,19 +201,17 @@
             style="@style/Divider.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:background="@color/main_background" />
+            android:background="@android:color/transparent" />
 
         <TextView
             android:id="@+id/hidden_email_options"
+            style="@style/View.TextContainer"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="25dp"
-            android:background="@drawable/shape_rounded_rectangular"
             android:padding="10dp"
-            android:text="@string/hint_email_description"
-            android:textColor="?attr/colorOutline"
-            android:textSize="18sp" />
+            android:text="@string/hint_email_description" />
     </LinearLayout>
 
     <ProgressBar

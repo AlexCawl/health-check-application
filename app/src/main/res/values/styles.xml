@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="View" />
+
+    <style name="View.Surface" >
+        <item name="android:background">@drawable/shape_rounded_rectangular</item>
+    </style>
+
+    <style name="View.Surface.Light" parent="View.Surface" >
+        <item name="android:backgroundTint">?attr/colorPrimaryInverse</item>
+    </style>
+
+    <style name="View.TextContainer" parent="View.Surface" >
+        <item name="android:backgroundTint">?attr/colorPrimaryContainer</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="View.Icon" >
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:tint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="View.Hamburger" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="Divider.Vertical" parent="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

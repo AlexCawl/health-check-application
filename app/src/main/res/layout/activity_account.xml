@@ -12,14 +12,19 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorPrimary">
+
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/activity_account_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                app:titleTextColor="?attr/colorOnPrimary" />
         </com.google.android.material.appbar.AppBarLayout>
+
         <include layout="@layout/layout_activity_account" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
