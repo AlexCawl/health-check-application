@@ -13,38 +13,20 @@ import com.google.android.material.navigation.NavigationView;
 
 import org.alexcawl.health_check_application.R;
 import org.alexcawl.health_check_application.databinding.ActivitySettingsBinding;
+import org.alexcawl.health_check_application.ui.resource.Route;
 
 public class SettingsActivity extends AppCompatActivity {
     private ActivitySettingsBinding binding;
+    private Toolbar mToolbar;
+    private NavigationView mNavigationView;
+    private DrawerLayout mDrawerLayout;
 
     @SuppressLint("NonConstantResourceId")
     private void initiateNavigationDrawerMenu() {
-        Toolbar toolbar = binding.activitySettingsToolbar;
-        NavigationView navigationView = binding.activitySettingsNavigationView;
-        DrawerLayout drawerLayout = binding.activitySettingsDrawerLayout;
-        setSupportActionBar(toolbar);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            drawerLayout.closeDrawer(navigationView, true);
-            switch (item.getItemId()) {
-                case R.id.destination_activity_home:
-                    startActivity(new Intent(this, HomeActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                case R.id.destination_activity_manager:
-                    startActivity(new Intent(this, ManagerActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                case R.id.destination_activity_account:
-                    startActivity(new Intent(this, AccountActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                default:
-                    break;
-            }
-            return false;
-        });
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        setSupportActionBar(mToolbar);
+        mNavigationView.setNavigationItemSelectedListener(new Route(this, this.getClass(), mDrawerLayout));
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, 0, 0);
+        mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
 
@@ -52,7 +34,14 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.binding = ActivitySettingsBinding.inflate(getLayoutInflater());
+        init();
         setContentView(binding.getRoot());
         initiateNavigationDrawerMenu();
+    }
+
+    private void init() {
+        this.mToolbar = binding.activitySettingsToolbar;
+        this.mNavigationView = binding.activitySettingsNavigationView;
+        this.mDrawerLayout = binding.activitySettingsDrawerLayout;
     }
 }

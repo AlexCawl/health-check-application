@@ -26,7 +26,7 @@ public class AuthenticationActivity extends AppCompatActivity {
     }
 
     private void initBottomNavigationView() {
-        BottomNavigationView navView = findViewById(R.id.navigation_bottom_bar_activity_authentication);
+        BottomNavigationView navView = binding.navigationBottomBarActivityAuthentication;
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.destination_fragment_login, R.id.destination_fragment_register, R.id.destination_home_activity).build();
         NavController navController = Navigation.findNavController(this, R.id.navigation_host_container_auth);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

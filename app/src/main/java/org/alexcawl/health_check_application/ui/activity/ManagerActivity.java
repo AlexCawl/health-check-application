@@ -1,51 +1,33 @@
 package org.alexcawl.health_check_application.ui.activity;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 
-import org.alexcawl.health_check_application.R;
-import org.alexcawl.health_check_application.databinding.ActivityAccountBinding;
 import org.alexcawl.health_check_application.databinding.ActivityManagerBinding;
+import org.alexcawl.health_check_application.ui.resource.Route;
 
 public class ManagerActivity extends AppCompatActivity {
     private ActivityManagerBinding binding;
+    private Toolbar mToolbar;
+    private NavigationView mNavigationView;
+    private DrawerLayout mDrawerLayout;
 
     @SuppressLint("NonConstantResourceId")
     private void initiateNavigationDrawerMenu() {
-        Toolbar toolbar = binding.activityManagerToolbar;
-        NavigationView navigationView = binding.activityManagerNavigationView;
-        DrawerLayout drawerLayout = binding.activityManagerDrawerLayout;
-        setSupportActionBar(toolbar);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            drawerLayout.closeDrawer(navigationView, true);
-            switch (item.getItemId()) {
-                case R.id.destination_activity_home:
-                    startActivity(new Intent(this, HomeActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                case R.id.destination_activity_account:
-                    startActivity(new Intent(this, AccountActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                case R.id.destination_activity_settings:
-                    startActivity(new Intent(this, SettingsActivity.class));
-                    overridePendingTransition(0, 0);
-                    break;
-                default:
-                    break;
-            }
-            return false;
-        });
-        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, 0, 0);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        setSupportActionBar(mToolbar);
+        mNavigationView.setNavigationItemSelectedListener(new Route(this, this.getClass(), mDrawerLayout));
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, 0, 0);
+        mDrawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
     }
 
@@ -53,7 +35,25 @@ public class ManagerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.binding = ActivityManagerBinding.inflate(getLayoutInflater());
+        init();
         setContentView(binding.getRoot());
         initiateNavigationDrawerMenu();
     }
+
+    private void init() {
+        this.mToolbar = binding.activityManagerToolbar;
+        this.mNavigationView = binding.activityManagerNavigationView;
+        this.mDrawerLayout = binding.activityManagerDrawerLayout;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
