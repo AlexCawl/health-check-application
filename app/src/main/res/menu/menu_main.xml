@@ -5,6 +5,10 @@
         android:icon="@drawable/icon_baseline_calendar_month_24dp"
         android:title="@string/namespace_schedule" />
     <item
+        android:id="@+id/destination_activity_manager"
+        android:icon="@drawable/icon_baseline_post_add_24dp"
+        android:title="@string/namespace_manager" />
+    <item
         android:id="@+id/destination_activity_account"
         android:icon="@drawable/icon_baseline_person_24dp"
         android:title="@string/namespace_account" />

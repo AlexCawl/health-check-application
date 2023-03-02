@@ -11,6 +11,11 @@
         android:label="Home"
         tools:layout="@layout/activity_home" />
     <activity
+        android:id="@+id/destination_activity_manager"
+        android:name="org.alexcawl.health_check_application.ui.activity.ManagerActivity"
+        android:label="Manager"
+        tools:layout="@layout/activity_manager" />
+    <activity
         android:id="@+id/destination_activity_account"
         android:name="org.alexcawl.health_check_application.ui.activity.AccountActivity"
         android:label="Account"

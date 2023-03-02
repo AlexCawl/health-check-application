@@ -20,4 +20,5 @@
     <string name="hint_email_description">Email is optional, but we would be happy if you would share the address with us.</string>
     <string name="resource_account_name">Mr. Example</string>
     <string name="resource_schedule_name">Example TODO plan</string>
+    <string name="namespace_manager">Manager</string>
 </resources>

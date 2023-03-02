@@ -30,6 +30,10 @@ public class AccountActivity extends AppCompatActivity {
                     startActivity(new Intent(this, HomeActivity.class));
                     overridePendingTransition(0, 0);
                     break;
+                case R.id.destination_activity_manager:
+                    startActivity(new Intent(this, ManagerActivity.class));
+                    overridePendingTransition(0, 0);
+                    break;
                 case R.id.destination_activity_settings:
                     startActivity(new Intent(this, SettingsActivity.class));
                     overridePendingTransition(0, 0);

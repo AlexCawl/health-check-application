@@ -30,6 +30,10 @@ public class SettingsActivity extends AppCompatActivity {
                     startActivity(new Intent(this, HomeActivity.class));
                     overridePendingTransition(0, 0);
                     break;
+                case R.id.destination_activity_manager:
+                    startActivity(new Intent(this, ManagerActivity.class));
+                    overridePendingTransition(0, 0);
+                    break;
                 case R.id.destination_activity_account:
                     startActivity(new Intent(this, AccountActivity.class));
                     overridePendingTransition(0, 0);
